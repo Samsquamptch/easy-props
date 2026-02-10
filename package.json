@@ -21,6 +21,14 @@
      "configuration": {
       "title": "Easy Props",
       "properties": {
+        "easyprops.workflowProvider": {
+          "type": "string",
+          "default": "ActivePieces",
+          "description": "Set the workflow provider for the relevant prop types",
+          "enum": [
+            "ActivePieces"
+          ]
+        },
         "easyprops.propRequired": {
           "type": "boolean",
           "default": false,

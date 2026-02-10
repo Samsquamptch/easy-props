@@ -7,10 +7,26 @@ export function registerPropCommands(context: vscode.ExtensionContext) {
 }
 
 async function addProp() {
-  const picked = await vscode.window.showQuickPick(
+  const workflowProvider = vscode.workspace
+    .getConfiguration("easyprops")
+    .get<string>("workflowProvider");
+
+  switch (workflowProvider) {
+    case "ActivePieces":
+      activePiecesProp();
+      break;
+  }
+}
+
+async function activePiecesProp() {
+  var picked = await vscode.window.showQuickPick(
     ["string", "number", "boolean"],
     { placeHolder: "Select prop type" },
   );
+
+  const isRequired = vscode.workspace
+    .getConfiguration("easyprops")
+    .get<boolean>("getRequired", true);
 
   var output = "";
 
@@ -27,10 +43,6 @@ async function addProp() {
     default:
       break;
   }
-
-  const isRequired = vscode.workspace
-    .getConfiguration("easyprops")
-    .get<boolean>("getRequired", true);
 
   const editor = vscode.window.activeTextEditor;
   if (!editor) {
