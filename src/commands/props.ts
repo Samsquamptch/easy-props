@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import { generateShortText } from "../templates/ap-templates";
 
 export function registerPropCommands(context: vscode.ExtensionContext) {
   context.subscriptions.push(
@@ -20,7 +21,7 @@ async function addProp() {
 
 async function activePiecesProp() {
   var picked = await vscode.window.showQuickPick(
-    ["string", "number", "boolean"],
+    ["Short Text", "number", "boolean"],
     { placeHolder: "Select prop type" },
   );
 
@@ -31,8 +32,8 @@ async function activePiecesProp() {
   var output = "";
 
   switch (picked) {
-    case "string":
-      output = "this is a string";
+    case "Short Text":
+      output = generateShortText(isRequired);
       break;
     case "number":
       output = "this is a number";
@@ -51,6 +52,6 @@ async function activePiecesProp() {
 
   editor.edit((editBuilder) => {
     const position = editor.selection.active;
-    editBuilder.insert(position, output + "Prop setting is " + isRequired);
+    editBuilder.insert(position, output);
   });
 }
