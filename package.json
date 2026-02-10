@@ -1,5 +1,5 @@
 {
-  "name": "easyprops",
+  "name": "easyrops",
   "displayName": "Easy Props",
   "description": "",
   "version": "0.0.1",
@@ -16,6 +16,14 @@
       {
         "command": "easyprops.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "easyprops.newProp",
+        "title": "Add Prop"
+      },
+      {
+        "command": "easyprops.setAuth",
+        "title": "Set Auth"
       }
     ]
   },
