@@ -14,16 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "easyprops.helloWorld",
-        "title": "Hello World"
-      },
-      {
         "command": "easyprops.addProp",
         "title": "Add Prop"
-      },
-      {
-        "command": "easyprops.setRequired",
-        "title": "Set Requirement"
       }
     ],
      "configuration": {
