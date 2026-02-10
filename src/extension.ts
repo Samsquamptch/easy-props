@@ -27,9 +27,11 @@ export function activate(context: vscode.ExtensionContext) {
       return;
     }
 
+    const isRequired = vscode.workspace.getConfiguration('easyprops').get<boolean>('getRequired', true)
+
     editor.edit((editBuilder) => {
       const position = editor.selection.active;
-      editBuilder.insert(position, "new prop!");
+      editBuilder.insert(position, "Prop setting is " + isRequired);
     });
   });
 

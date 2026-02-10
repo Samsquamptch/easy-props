@@ -22,10 +22,30 @@
         "title": "Add Prop"
       },
       {
-        "command": "easyprops.setAuth",
-        "title": "Set Auth"
+        "command": "easyprops.setRequired",
+        "title": "Set Requirement"
       }
-    ]
+    ],
+     "configuration": {
+      "title": "Easy Props",
+      "properties": {
+        "easyprops.propRequired": {
+          "type": "boolean",
+          "default": false,
+          "description": "Set required field to true or false"
+        },
+        "easyprops.authName": {
+          "type": "string",
+          "default": "easyAuth",
+          "description": "The name of your piece's auth, for dynamic lists"
+        },
+        "easyprops.optionsLength": {
+          "type": "number",
+          "default": 1,
+          "description": "The number of elements provided in drop down menus"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
