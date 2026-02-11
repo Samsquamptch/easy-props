@@ -8,7 +8,7 @@ export enum ActivepiecesPropertyType {
   STATIC_DROPDOWN = "StaticDropdown",
   STATIC_MULTISELECT_DROPDOWN = "StaticMultiSelectDropdown",
   JSON = "Json",
-  OBJECT = "Object",
+  DICTIONARY = "Dictionary",
   FILE = "File",
   ARRAY_STRINGS = "ArrayStrings",
   ARRAY_FIELDS = "ArrayFields",

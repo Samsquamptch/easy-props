@@ -9,7 +9,7 @@ import {
   generateStaticDropdown,
   generateStaticMultiSelectDropdown,
   generateJson,
-  generateObject,
+  generateDictionary,
   generateFile,
   generateArray,
   generateDropdown,
@@ -33,7 +33,7 @@ export async function activePiecesProp() {
 
   const isRequired = vscode.workspace
     .getConfiguration("easyprops")
-    .get<boolean>("getRequired", true);
+    .get<boolean>("propRequired", true);
 
   var output = "";
 
@@ -74,8 +74,8 @@ export async function activePiecesProp() {
       output = generateJson(isRequired);
       break;
 
-    case ActivepiecesPropertyType.OBJECT:
-      output = generateObject(isRequired);
+    case ActivepiecesPropertyType.DICTIONARY:
+      output = generateDictionary(isRequired);
       break;
 
     case ActivepiecesPropertyType.FILE:
