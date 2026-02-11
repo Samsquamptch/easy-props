@@ -1,5 +1,5 @@
 import { returnAuthName } from "../utils/auth-name";
-import { listBuilder } from "../utils/list-builder";
+import { callListBuilder } from "../utils/list-builder";
 
 export function generateShortText(isRequired: boolean) {
   return `
@@ -59,7 +59,7 @@ export function generateNumber(isRequired: boolean): string {
 }
 
 export function generateStaticDropdown(isRequired: boolean): string {
-  const listOptions = listBuilder();
+  const listOptions = callListBuilder();
 
   return `
   staticDropdown: Property.StaticDropdown({
@@ -75,7 +75,7 @@ export function generateStaticDropdown(isRequired: boolean): string {
 }
 
 export function generateStaticMultiSelectDropdown(isRequired: boolean): string {
-  const listOptions = listBuilder();
+  const listOptions = callListBuilder();
 
   return `
   staticMultiDropdown: Property.StaticMultiSelectDropdown({
@@ -135,7 +135,7 @@ export function generateArray(isRequired: boolean): string {
 export function generateDropdown(isRequired: boolean): string {
   const authName = returnAuthName()
 
-  const listOptions = listBuilder();
+  const listOptions = callListBuilder();
 
   return `
   dropdown: Property.Dropdown({
@@ -165,7 +165,7 @@ export function generateDropdown(isRequired: boolean): string {
 export function generateMultiSelectDropdown(isRequired: boolean): string {
   const authName = returnAuthName()
 
-  const listOptions = listBuilder();
+  const listOptions = callListBuilder();
 
   return `
   multiDropdown: Property.MultiSelectDropdown({
