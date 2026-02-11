@@ -18,6 +18,10 @@
       {
         "command": "easyprops.addProp",
         "title": "Add Prop"
+      },
+      {
+        "command": "easyprops.addList",
+        "title": "Insert List"
       }
     ],
      "configuration": {

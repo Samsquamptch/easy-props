@@ -13,10 +13,14 @@ The extension is built with a modular command and generator structure for mainta
 - Utilities for building lists and returning auth names  
 - Prepared for multi-workflow expansion (e.g., n8n)  
 
-
 ## Requirements
 
 This extension is intended to be used with specific workflow frameworks. Please ensure you are using this on a relevant project.
+
+## Commands
+
+* **Add Prop** — Insert a scaffolded Activepieces prop of the selected type.
+* **Insert List** — Insert a list of `label` / `value` pairs with a chosen length.
 
 ## Extension Settings
 

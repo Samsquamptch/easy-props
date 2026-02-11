@@ -1,14 +1,18 @@
 import * as vscode from "vscode";
 
-export function listBuilder() {
+export function callListBuilder() {
     var listLength = vscode.workspace
           .getConfiguration("easyprops")
           .get<number>("optionsLength");
-    
+
     if (!listLength) {
         listLength = 1
     }
     
+    return listBuilder(listLength)
+}
+
+export function listBuilder(listLength: number) {   
     var i = 1
     var listText = `{
         label: 'Option 1',
