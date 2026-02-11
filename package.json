@@ -1,5 +1,6 @@
 {
   "name": "easyrops",
+  "publisher": "Samsquamptch",
   "displayName": "Easy Props",
   "description": "",
   "version": "0.0.1",
@@ -7,7 +8,7 @@
     "vscode": "^1.109.0"
   },
   "categories": [
-    "Other"
+    "Snippets"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -42,6 +43,8 @@
         "easyprops.optionsLength": {
           "type": "number",
           "default": 1,
+          "minimum": 1,
+          "maximum": 20,
           "description": "The number of elements provided in drop down menus"
         }
       }
