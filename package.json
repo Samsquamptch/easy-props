@@ -1,5 +1,6 @@
 {
-  "name": "easyprops",
+  "name": "easyrops",
+  "publisher": "Samsquamptch",
   "displayName": "Easy Props",
   "description": "",
   "version": "0.0.1",
@@ -7,17 +8,47 @@
     "vscode": "^1.109.0"
   },
   "categories": [
-    "Other"
+    "Snippets"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "easyprops.helloWorld",
-        "title": "Hello World"
+        "command": "easyprops.addProp",
+        "title": "Add Prop"
       }
-    ]
+    ],
+     "configuration": {
+      "title": "Easy Props",
+      "properties": {
+        "easyprops.workflowProvider": {
+          "type": "string",
+          "default": "ActivePieces",
+          "description": "Set the workflow provider for the relevant prop types",
+          "enum": [
+            "ActivePieces"
+          ]
+        },
+        "easyprops.propRequired": {
+          "type": "boolean",
+          "default": false,
+          "description": "Set required field to true or false"
+        },
+        "easyprops.authName": {
+          "type": "string",
+          "default": "easyAuth",
+          "description": "The name of your piece's auth, for dynamic lists"
+        },
+        "easyprops.optionsLength": {
+          "type": "number",
+          "default": 1,
+          "minimum": 1,
+          "maximum": 20,
+          "description": "The number of elements provided in drop down menus"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
