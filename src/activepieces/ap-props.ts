@@ -19,13 +19,9 @@ import {
 } from "../activepieces/ap-templates";
 
 import { ActivepiecesPropertyType } from "../activepieces/ap-enum";
+import { insertText } from "../utils/insert-text";
 
 export async function activePiecesProp() {
-  const editor = vscode.window.activeTextEditor;
-  if (!editor) {
-    return;
-  }
-
   const propType = await vscode.window.showQuickPick(
     Object.values(ActivepiecesPropertyType),
     { placeHolder: "Select a property type" },
@@ -107,8 +103,5 @@ export async function activePiecesProp() {
     }
   }
 
-  editor.edit((editBuilder) => {
-    const position = editor.selection.active;
-    editBuilder.insert(position, output);
-  });
+  insertText(output)
 }
