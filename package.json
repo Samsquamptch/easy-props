@@ -2,6 +2,7 @@
   "name": "easyrops",
   "publisher": "Samsquamptch",
   "displayName": "Easy Props",
+  "repository": { "type": "git", "url": "https://github.com/Samsquamptch/easy-props" },
   "description": "",
   "version": "0.0.1",
   "engines": {
