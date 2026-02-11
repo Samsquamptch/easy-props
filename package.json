@@ -3,8 +3,8 @@
   "publisher": "Samsquamptch",
   "displayName": "Easy Props",
   "repository": { "type": "git", "url": "https://github.com/Samsquamptch/easy-props" },
-  "description": "",
-  "version": "0.0.1",
+  "description": "VS Code extension for quickly scaffolding Activepieces props with full type support and configurable settings.",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.109.0"
   },
